@@ -120,6 +120,8 @@ The original creator is the ultimate owner. Even another Owner cannot permanentl
 
 Private Tonics are not publicly listed and are accessible only to the creator and invited users.
 
+When viewing a Tonic, its primary collection action is Drink. A Tonic does not use Mix as its primary action.
+
 ## 6. Barrels
 
 A Barrel is a platform-created public collection.
@@ -140,6 +142,8 @@ Barrels:
 Barrels have a barrel-shaped visual identity, but they do not need to be displayed as giant literal barrels everywhere.
 
 When a user first joins, they can browse the available Barrels and choose approximately three to follow as their initial discovery sources.
+
+When viewing a Barrel, its primary collection action is Drink. A Barrel does not use Mix as its primary action.
 
 ## 7. Shelf
 

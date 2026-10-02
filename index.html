@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Social Media Thing</title>
+<style>
+:root{--bg:#07110e;--panel:#0d1b17;--line:#29413a;--text:#eefaf6;--muted:#91aaa2;--teal:#00ffc8;--pink:#ff4d91}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px system-ui,sans-serif}a,button{color:inherit;font:inherit}a{text-decoration:none}
+.top{position:sticky;top:0;z-index:10;display:flex;gap:8px;align-items:center;padding:9px 12px;background:#07110eee;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.ico{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;background:var(--panel);font-size:20px}.brand{flex:1;text-align:center;font-weight:800}.brand i{color:var(--teal);font-style:normal}
+main{max-width:1100px;margin:auto;padding:18px 12px 70px}.screen{padding-top:16px;min-height:100vh}.head{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:8px 0 18px}.head h1{margin:0;font-size:28px}.muted{color:var(--muted)}
+.profile{display:flex;gap:13px;align-items:center;padding:18px;border:1px solid var(--line);border-radius:20px;background:radial-gradient(circle at 15% 20%,#00ffc833,transparent 35%),radial-gradient(circle at 85% 80%,#ff4d9133,transparent 35%),var(--panel)}.avatar{width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--teal),#143c32 48%,var(--pink));border:2px solid var(--teal)}.stats,.tabs{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}.pill,.tab{padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:#07110e;font-size:12px;color:var(--muted)}
+.bar{padding:15px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(#15271f,#0b1713);display:flex;gap:10px;align-items:center;margin:18px 0}.bell{margin-left:auto}
+.grid{columns:2 150px;column-gap:10px}.card{display:block;width:100%;break-inside:avoid;margin:0 0 10px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}.media{height:190px;background:linear-gradient(135deg,var(--teal),#123b31 48%,var(--pink))}.tall{height:250px}.wide{height:145px}.cardbody{padding:10px}.cardbody small{display:block;color:var(--muted);margin-top:4px}
+.collections{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.collection{min-height:120px;padding:15px;border:1px solid var(--line);border-radius:17px;background:var(--panel)}.primary{display:inline-block;border:0;border-radius:11px;padding:11px 15px;background:var(--teal);color:#00140f;font-weight:800}
+.field{display:grid;gap:6px;margin:14px 0}.field input,.field textarea,.field select{width:100%;padding:11px;border-radius:11px;border:1px solid var(--line);background:#081510;color:var(--text)}.setting{display:flex;justify-content:space-between;width:100%;padding:15px 0;border:0;border-bottom:1px solid var(--line);background:none;text-align:left}.setting small{display:block;color:var(--muted);margin-top:4px}
+.viewer{min-height:100vh;background:radial-gradient(circle at 50% 25%,#14352c,#030806 65%)}.hero{min-height:58vh;display:grid;place-items:center;padding:20px}.heroimg{width:min(92vw,760px);aspect-ratio:4/3;border-radius:12px;background:linear-gradient(135deg,var(--teal),#143d33 45%,var(--pink));box-shadow:0 20px 70px #000b}.info{max-width:900px;margin:auto;padding:18px 14px 60px;background:#07110ef2;border-top:1px solid var(--line)}.actions{display:flex;gap:8px;padding:12px 0;border-block:1px solid var(--line);margin-top:15px}.action{width:46px;height:46px;display:grid;place-items:center;border:1px solid var(--line);border-radius:13px;background:var(--panel);font-size:19px}
+.tree{height:420px;border:1px solid var(--line);border-radius:20px;position:relative;background:radial-gradient(circle,#15372d,#07110e 68%)}.node{position:absolute;padding:10px 12px;border:1px solid var(--teal);border-radius:999px;background:#071a15}.center{left:50%;top:50%;transform:translate(-50%,-50%)}.n1{left:12%;top:20%}.n2{right:12%;top:23%}.n3{left:10%;bottom:20%}.n4{right:10%;bottom:22%}
+.notice{padding:13px;border:1px solid var(--line);border-radius:14px;background:var(--panel);margin:8px 0}
+@media(min-width:760px){.grid{columns:4 170px}.collections{grid-template-columns:repeat(4,1fr)}main{padding-inline:24px}}
+</style>
+</head>
+<body>
+<header class="top">
+<a class="ico" href="#home">☻</a><div class="brand">Social <i>Media</i> Thing</div>
+<a class="ico" href="#search">⌕</a><a class="ico" href="#profile">⌂</a><a class="ico" href="#settings">⚙</a>
+</header>
+<main>
+
+<section id="home" class="screen">
+<div class="profile"><div class="avatar"></div><div><b style="font-size:21px">@brucee</b><div class="muted">Brucee · welcome back</div><div class="stats"><span class="pill">★ 143 Stars</span><span class="pill">♥ 1.2k</span></div></div></div>
+<div class="bar"><b>🥃 Abyssal Bar</b><span class="muted">your discovery table</span><a class="ico bell" href="#notifications">♧</a></div>
+<div class="head"><div><h1>The Bar</h1><div class="muted">Find something worth clicking.</div></div><a class="primary" href="#create">＋ Create</a></div>
+<div class="grid">
+<a class="card" href="#post"><div class="media tall"></div><div class="cardbody"><b>Neon Garden</b><small>@DiceeInked · ♥ 248</small></div></a>
+<a class="card" href="#post"><div class="media wide"></div><div class="cardbody"><b>After the Rain</b><small>@mossbyte · ♥ 391</small></div></a>
+<a class="card" href="#post"><div class="media"></div><div class="cardbody"><b>Tiny Planet</b><small>@orbitaltea · ♥ 173</small></div></a>
+<a class="card" href="#post"><div class="media tall"></div><div class="cardbody"><b>Signal Lost</b><small>@staticfox · ♥ 511</small></div></a>
+<a class="card" href="#post"><div class="media wide"></div><div class="cardbody"><b>Cloud Study</b><small>@softnoise · ♥ 95</small></div></a>
+<a class="card" href="#post"><div class="media"></div><div class="cardbody"><b>Glasshouse</b><small>@mossbyte · ♥ 321</small></div></a>
+<a class="card" href="#post"><div class="media tall"></div><div class="cardbody"><b>Night Bus</b><small>@midnightmilk · ♥ 207</small></div></a>
+<a class="card" href="#post"><div class="media wide"></div><div class="cardbody"><b>Untitled Shapes</b><small>@dicecollector · ♥ 64</small></div></a>
+</div>
+</section>
+
+<section id="profile" class="screen">
+<div class="head"><div><h1>Personal Bar</h1><div class="muted">@brucee</div></div></div>
+<div class="profile"><div class="avatar"></div><div><b style="font-size:21px">@brucee</b><div class="muted">Brucee</div><div class="stats"><span class="pill">★ 143 Stars</span><span class="pill">♥ 1.2k</span><span class="pill">✦ 86 Salt</span><span class="pill">⌁ 3.6k Clicks</span></div></div></div>
+<div class="bar"><b>🥃 Brucee's Personal Bar</b><a class="ico bell" href="#notifications">♧</a></div>
+<h2>Shelf</h2><div class="collections"><a class="collection" href="#love"><b>💗 Love Potion</b><p class="muted">Hearted Posts</p></a><a class="collection" href="#salt"><b>🫙 Salt Jar</b><p class="muted">Salted Posts</p></a><div class="collection"><b>🧪 Drunk Tonics</b><p class="muted">Saved collections</p></div><div class="collection"><b>🛢 Drunk Barrels</b><p class="muted">Discovery sources</p></div></div>
+<div class="head" style="margin-top:28px"><h1>Your Posts</h1></div><div class="grid"><a class="card" href="#post"><div class="media tall"></div><div class="cardbody"><b>Neon Garden</b></div></a><a class="card" href="#post"><div class="media wide"></div><div class="cardbody"><b>Untitled Shapes</b></div></a></div>
+</section>
+
+<section id="search" class="screen">
+<div class="head"><div><h1>Search</h1><div class="muted">Posts, Users, Tonics, and Barrels.</div></div></div>
+<div class="field"><input placeholder="Search..."></div><div class="tabs"><button class="tab">Posts</button><button class="tab">Users</button><button class="tab">Tonics</button><button class="tab">Barrels</button></div><div class="tabs"><button class="tab">Popularity</button><button class="tab">Clicks</button><button class="tab">Relevance</button><button class="tab">Filters ⚙</button></div>
+</section>
+
+<section id="settings" class="screen">
+<div class="head"><div><h1>Settings</h1><div class="muted">Classic account and platform settings.</div></div></div>
+<button class="setting"><span><b>Profile</b><small>Picture, background, nickname, pronouns</small></span>›</button>
+<button class="setting"><span><b>Account</b><small>Username, email, password, sign-in</small></span>›</button>
+<button class="setting"><span><b>Privacy</b><small>Public/private profile information</small></span>›</button>
+<button class="setting"><span><b>Notifications</b><small>Notification behavior</small></span>›</button>
+<button class="setting"><span><b>Blocked Users</b><small>Manage blocked accounts</small></span>›</button>
+<button class="setting"><span><b>Display</b><small>Appearance and interface preferences</small></span>›</button>
+<button class="setting"><span><b style="color:#ff5d6c">Delete Account</b><small>30-day recovery flow</small></span>›</button>
+</section>
+
+<section id="notifications" class="screen">
+<div class="head"><div><h1>Notifications</h1><div class="muted">Grouped activity from your world.</div></div></div>
+<div class="tabs"><span class="tab">All</span><span class="tab">Comments</span><span class="tab">Project</span><span class="tab">General</span></div>
+<div class="notice"><b>Project</b> · Someone Hearted “Neon Garden”.<small class="muted">2m</small></div>
+<div class="notice"><b>Comments</b> · mossbyte replied to your comment.<small class="muted">18m</small></div>
+<div class="notice"><b>General</b> · Check out new Posts in your Barrels.<small class="muted">1h</small></div>
+</section>
+
+<section id="post" class="screen viewer">
+<div class="hero"><div class="heroimg"></div></div><div class="info"><div class="muted">@DiceeInked · ★ 143 Stars</div><h1>Neon Garden</h1><p style="line-height:1.55">A little piece of the Bar. This is placeholder description text for the full Post viewer.</p>
+<div class="actions"><a class="action" href="#mix">🥃</a><a class="action" href="#extra">⋯</a><a class="action" href="#comments">◌</a><a class="action" href="#heart">♥</a></div><div class="tabs"><span class="pill">Hold + swipe ↑ to Drink</span><span class="pill">Hold + swipe ↑ to Salt</span></div><h2>Related / Mixed Posts</h2></div>
+</section>
+
+<section id="mix" class="screen"><div class="head"><div><h1>Mix Post</h1><div class="muted">Choose a Tonic or Barrel.</div></div></div><div class="collections"><div class="collection"><b>🧪 Midnight Tonic</b><p class="muted">Editor / Owner</p></div><div class="collection"><b>🛢 Nature Barrel</b><p class="muted">Public discovery collection</p></div><div class="collection"><b>🛢 New & Notable Barrel</b><p class="muted">Public discovery collection</p></div></div></section>
+
+<section id="extra" class="screen"><div class="head"><div><h1>Extra Options</h1><div class="muted">Post utilities.</div></div></div><div class="collections"><div class="collection"><b>Share</b><p class="muted">Copy/share the Post link.</p></div><a class="collection" href="#tree"><b>Potion Tree</b><p class="muted">Explore Mix connections.</p></a><div class="collection"><b>Report</b><p class="muted">Report this Post.</p></div></div></section>
+
+<section id="tree" class="screen"><div class="head"><div><h1>Potion Tree</h1><div class="muted">Mix connection exploration.</div></div></div><div class="tree"><span class="node center">Current Post</span><span class="node n1">Connected A</span><span class="node n2">Connected B</span><span class="node n3">Connected C</span><span class="node n4">Connected D</span></div></section>
+
+<section id="comments" class="screen"><div class="head"><div><h1>Comments</h1><div class="muted">Replies, upvotes, downvotes, and reports.</div></div></div><div class="notice"><b>@mossbyte</b><br>this is a really good one.<div class="tabs"><span class="pill">▲ 18</span><span class="pill">▼ 2</span><span class="pill">Reply</span><span class="pill">Report</span></div></div><div class="notice" style="margin-left:18px"><b>@orbitaltea</b><br>agreed!</div></section>
+
+<section id="create" class="screen"><div class="head"><div><h1>Create</h1><div class="muted">Choose what you're making.</div></div></div><div class="collections"><a class="collection" href="#create-image"><b>▧ Image</b><p class="muted">Currently available</p></a><div class="collection"><b>✎ Text / Verse</b><p class="muted">Planned</p></div><div class="collection"><b>▤ Carousel</b><p class="muted">Planned</p></div></div></section>
+
+<section id="create-image" class="screen"><div class="head"><div><h1>New Image Post</h1><div class="muted">Phase 1 editor skeleton.</div></div></div><div class="media" style="height:280px;border-radius:14px"></div><div class="field"><label>Title *</label><input></div><div class="field"><label>Subtitle</label><input></div><div class="field"><label>Description</label><textarea rows="5"></textarea></div><div class="field"><label>Age Rating</label><select><option>None</option><option>16+</option><option>18+</option></select></div><button class="setting"><span><b>Advanced Settings</b><small>Image Settings · Comic Strip Mode</small></span>›</button><a class="primary" style="margin-top:18px" href="#home">Create Post</a></section>
+
+<section id="love" class="screen"><div class="head"><div><h1>💗 Love Potion</h1><div class="muted">Hearted Posts.</div></div></div><div class="grid"><a class="card" href="#post"><div class="media"></div><div class="cardbody"><b>Neon Garden</b></div></a><a class="card" href="#post"><div class="media tall"></div><div class="cardbody"><b>Tiny Planet</b></div></a></div></section>
+<section id="salt" class="screen"><div class="head"><div><h1>🫙 Salt Jar</h1><div class="muted">Salted Posts.</div></div></div><div class="grid"><a class="card" href="#post"><div class="media tall"></div><div class="cardbody"><b>Signal Lost</b></div></a><a class="card" href="#post"><div class="media wide"></div><div class="cardbody"><b>Cloud Study</b></div></a></div></section>
+
+</main>
+</body>
+</html>

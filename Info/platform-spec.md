@@ -146,14 +146,13 @@ When a user first joins, they can browse the available Barrels and choose approx
 A Shelf is the user's collection area.
 
 It can contain:
-- Drunk Posts
 - Drunk Tonics
 - Drunk Barrels
 - Love Potion
 - Salt Jar
 - Other future collection objects
 
-A saved Post remains an individual saved item. It does not automatically become a Tonic.
+Posts are not added to the Shelf through Drink. Posts can still appear in special collections such as Love Potion and Salt Jar.
 
 ## 8. Drink
 
@@ -164,18 +163,16 @@ Drink means saving or collecting something to the user's Shelf.
 Drinking is unlimited and is never intended to be paywalled or consume Salt.
 
 A user can Drink:
-- Posts
 - Tonics
 - Barrels
 
-Drinking a Post and drinking a Tonic have the same basic function: they add the selected item to the Shelf.
+Posts cannot be Drunk and are never added to the Shelf through Drink.
 
 The visual container differs:
-- A Drunk Post can use a glass-like container.
 - A Drunk Tonic can use a potion-bottle-like container.
 - A Drunk Barrel can retain a barrel-inspired appearance.
 
-After an item is Drunk, its button changes to the state Drunk. Selecting Drunk again removes it from the Shelf.
+After a Tonic or Barrel is Drunk, its Drink button changes to the state Drunk. Selecting Drunk again removes it from the Shelf.
 
 The Drink action can have a visual animation using colors or visual elements inspired by the saved content.
 
@@ -326,7 +323,7 @@ It contains:
 
 The Shelf comes before the user's created Posts.
 
-The Shelf can contain Drunk Posts, Drunk Tonics, Drunk Barrels, Love Potion, and Salt Jar.
+The Shelf can contain Drunk Tonics, Drunk Barrels, Love Potion, and Salt Jar.
 
 The profile distinguishes collected content from content actually created by the user.
 
@@ -343,7 +340,7 @@ A creator's profile contains:
 
 Creators can decide which Shelf material is visible to other people.
 
-Visible shelf content may include Drunk Barrels, Drunk Tonics, Drunk Posts, Love Potion, Salt Jar, and other supported objects.
+Visible shelf content may include Drunk Barrels, Drunk Tonics, Love Potion, Salt Jar, and other supported objects.
 
 The creator's actual Posts are shown separately farther down the page.
 
@@ -390,7 +387,7 @@ Current actions, from left to right:
 
 Mix is deliberately the far-left primary action because creating connections is a defining part of the platform.
 
-Drink is not a primary action-bar button. It is available inside Extra Options.
+Posts do not have a Drink button. Mix is the Post's primary connection action.
 
 ## 20. Extra Options and Share
 
@@ -399,7 +396,6 @@ Extra Options is a three-dot menu.
 The initial menu contains:
 - Share
 - Potion Tree
-- Drink
 
 Future utilities such as downloading can be added later.
 
@@ -485,7 +481,6 @@ The exact final settings list is TBD.
 Initial feed discovery comes from the user's selected Barrels.
 
 Drink is a major discovery signal:
-- Drunk Posts can influence recommendations.
 - Drunk Tonics can expose their contents as discovery sources.
 - Drunk Barrels can expose their contents as discovery sources.
 
@@ -653,7 +648,7 @@ Home/Bar -> Barrel -> Barrel contents
 
 Home/Bar -> Search -> Posts / Users / Tonics / Barrels
 
-Personal Bar -> Shelf -> Drunk Post / Tonic / Barrel / Love Potion / Salt Jar
+Personal Bar -> Shelf -> Drunk Tonic / Drunk Barrel / Love Potion / Salt Jar
 
 Post -> Extra Options -> Share / Potion Tree
 
@@ -784,7 +779,7 @@ Tonic = user-created collection.
 
 Barrel = platform-created public collection and discovery starting point.
 
-Drink = action that saves a Post, Tonic, or Barrel to the Shelf.
+Drink = action that saves a Tonic or Barrel to the Shelf.
 
 Drunk = saved state produced by Drink.
 

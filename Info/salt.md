@@ -1,23 +1,31 @@
 # Salt
 
-The Salt button means:
-
-> "I like this enough to give it special appreciation."
+The Salt button represents special appreciation.
 
 ## Behavior
 
-- Salt is limited to a certain number per day.
-- Using Salt adds Salt appreciation to the post.
-- Salted posts can appear in the user's personal Salt Jar.
-- The user can remove an item from their Salt Jar at any time.
-- Removing an item from the Salt Jar does NOT return the Salt.
-- Removing an item from the Salt Jar does NOT remove the Salt appreciation from the post.
-- Salt is therefore an appreciation action, while the Salt Jar is only the user's personal collection of salted posts.
+- Salt is limited to a daily allowance.
+- Using Salt adds Salt appreciation to the Post.
+- Using Salt adds the item to the user's Salt Jar.
+- Salt does not directly influence feed recommendations.
+- Salt is never purchasable.
+
+The user can remove an item from the Salt Jar.
+
+Removing an item:
+- Does not refund the Salt.
+- Does not remove the Salt appreciation from the Post.
+
+The Salt Jar is therefore a personal collection of Salted items rather than an undo system.
 
 ## Visual identity
 
-Salted content can have special visual treatment. For example, a Drink that has also been salted can display a salt rim around its bottle.
+The Salt Jar is a jar containing cube-like pieces resembling salt or sugar cubes.
+
+Opening the Salt Jar has a freeze-style visual effect.
+
+A future visual treatment can also make Salted content recognizable elsewhere, but the exact treatment is TBD.
 
 ## Meaning
 
-Salt is intentionally more meaningful than a Heart because the user has a limited daily supply.
+Salt is more meaningful than a Heart because the user has a limited daily supply.

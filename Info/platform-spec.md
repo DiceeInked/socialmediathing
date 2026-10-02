@@ -203,6 +203,7 @@ A Shelf is the user's collection area.
 It can contain:
 - Drunk Tonics
 - Drunk Barrels
+- Drunk Posts
 - Love Potion
 - Salt Jar
 - Other future collection objects
@@ -220,8 +221,9 @@ Drinking is unlimited and is never intended to be paywalled or consume Salt.
 A user can Drink:
 - Tonics
 - Barrels
+- Posts
 
-Posts cannot be Drunk and are never added to the Shelf through Drink.
+Posts can be Drunk and are saved in the user's Drunk area.
 
 The visual container differs:
 - A Drunk Tonic can use a potion-bottle-like container.
@@ -461,7 +463,7 @@ The Post action bar uses four visible controls rather than separate buttons for 
 
 The shot-glass Mix control supports:
 - Tap: Mix the Post into a Tonic or Barrel.
-- Touch and hold, then swipe upward: Drink, where the available target is a Tonic or Barrel.
+- Touch and hold, then swipe upward: Drink, where the available target is a Tonic, Barrel, or Post.
 
 The Heart control supports:
 - Tap: Heart the Post.
@@ -470,7 +472,7 @@ The Heart control supports:
 The exact gesture animation and affordance are UI implementation details, but the four-button interaction model is part of the current design.
 
 
-Posts do not have a Drink button. Mix is the Post's primary connection action.
+Posts do not need a separate visible Drink button. Mix is the Post's primary visible connection action, while Drink is available through the hold-and-swipe interaction.
 
 ## 20. Extra Options and Share
 
@@ -862,7 +864,7 @@ Tonic = user-created collection.
 
 Barrel = platform-created public collection and discovery starting point.
 
-Drink = action that saves a Tonic or Barrel to the Shelf.
+Drink = action that saves a Tonic, Barrel, or Post to the Drunk area.
 
 Drunk = saved state produced by Drink.
 
@@ -943,7 +945,7 @@ The user can:
 - Scroll downward to view Posts they have created.
 - View their Love Potion.
 - View their Salt Jar.
-- View their Drunk Tonics and Drunk Barrels where applicable.
+- View their Drunk Tonics, Drunk Barrels, and Drunk Posts where applicable.
 - Open the notification bell on their own bar/table.
 
 The Shelf is conceptually plural because it can contain multiple collection objects, even though it is collectively called the Shelf.

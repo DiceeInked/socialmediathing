@@ -26,6 +26,41 @@ The initial version supports images. GIF uploading is explicitly postponed and i
 
 The exact maximum file size and supported image formats are implementation decisions to be selected later.
 
+### Post creation and publishing
+
+The current Create flow begins by asking the user to choose a content type:
+- Image
+- Text
+- Carousel
+
+Only Image creation is implemented in the current design. Text/Verse and Carousel creation are planned for later.
+
+For an Image Post, the creation screen contains:
+- Image upload area/button at the top. The selected image is displayed in the editor.
+- Title, which is required.
+- Subtitle, which is optional.
+- Description, which is optional.
+- Age Rating, with the choices None, 16+, and 18+.
+- Advanced Settings, collapsed by default.
+
+There is no Post visibility selector. Posts are visible; users do not choose Public, Unlisted, or Private for individual Posts.
+
+If a required field is empty, the Create button is unavailable. A Post is not submitted until all required fields are filled.
+
+The Age Rating is an additional audience restriction, not permission to post otherwise prohibited material. Inappropriate content remains prohibited regardless of its selected age rating.
+
+After the user submits a valid Post, the platform immediately attempts to publish it.
+
+If publication fails, the platform:
+- Shows the user a notification about the failure.
+- Places a private failed-Post entry in the creator's Posts section. Other users cannot see this failed entry.
+- Preserves the available Post information so the user can inspect it.
+- Allows the user to open the failed entry and view its information.
+- Provides a Recreate action so the user can retry publication.
+- Allows the user to correct or replace information before retrying if something was corrupted or incomplete.
+
+A successful publication creates the Post immediately rather than placing it into a normal draft queue.
+
 ### Verses
 
 A Verse is a text-based post.
@@ -61,6 +96,22 @@ Feed items use an approximate aspect-ratio range from 2:1 landscape to 1:2 portr
 These restrictions apply to feed cards only.
 
 After a user opens a Post, the viewer becomes full-screen and shows the actual media. The feed card's aspect-ratio limits no longer apply.
+
+
+### Image settings and Comic Strip Mode
+
+Advanced Settings contains Image Settings for Image Posts.
+
+Comic Strip Mode is an optional setting for unusually tall images. If an uploaded image is taller than approximately a 1:2 aspect ratio, the editor can recommend enabling Comic Strip Mode.
+
+When Comic Strip Mode is enabled:
+- The image is presented as a vertically scrollable comic strip.
+- Its left and right edges are aligned with the sides of the screen.
+- When the viewer first opens the Post, the user scrolls through the comic strip before reaching the Post information/action section.
+
+When Comic Strip Mode is disabled, the Post uses the normal image presentation. The user can tap the image to open a more immersive full-screen image view, where zooming and other image-viewing interactions can be supported.
+
+These Comic Strip rules affect the Post viewer presentation, not the feed card's aspect-ratio limits.
 
 ## 4. Persistent Posts and archival deletion
 
@@ -212,7 +263,7 @@ Salt is never purchasable.
 Using Salt:
 - Adds Salt appreciation to the Post.
 - Adds the Post to the user's Salt Jar.
-- Does not directly change feed recommendations.
+- Influences feed recommendations through connected discovery.
 
 Removing an item from the Salt Jar:
 - Does not refund the Salt.
@@ -382,14 +433,42 @@ If the media is unusually long, the user can scroll through it.
 
 At the bottom is the Post action bar.
 
+The Post viewer has a top navigation bar. On the Home/Bar page, its leftmost control is currently a placeholder icon, followed by Search and Settings. On a Post viewer, the leftmost control becomes Back, followed by Search and Settings.
+
+The Post itself occupies essentially the full screen beneath the top bar. The viewer then scrolls into a Post information/action section containing:
+- Creator profile picture
+- Creator/channel name
+- A divider
+- Title
+- Subtitle, if configured; otherwise a short preview of the Description, such as its first sentence
+- A Description area that can be opened to reveal the full Description
+- The Post action row
+- A divider
+- Related/Mixed Posts
+
+The related/mixed section is based on actual Mix relationships surrounding the current Post. It can include Posts that are in the same Tonic or Barrel and other Posts connected through the Mix system. A separate ranking/display system will determine exactly which related Posts are surfaced and in what order.
+
+
 Current actions, from left to right:
-- Mix, the primary connection action
+- Mix, represented by a shot-glass-style icon and the primary connection action
 - Extra Options, three dots
 - Comment, chat bubble
-- Salt, slightly tilted square/diamond
 - Heart, heart icon
 
 Mix is deliberately the far-left primary action because creating connections is a defining part of the platform.
+
+The Post action bar uses four visible controls rather than separate buttons for every action.
+
+The shot-glass Mix control supports:
+- Tap: Mix the Post into a Tonic or Barrel.
+- Touch and hold, then swipe upward: Drink, where the available target is a Tonic or Barrel.
+
+The Heart control supports:
+- Tap: Heart the Post.
+- Touch and hold, then swipe upward: Salt the Post.
+
+The exact gesture animation and affordance are UI implementation details, but the four-button interaction model is part of the current design.
+
 
 Posts do not have a Drink button. Mix is the Post's primary connection action.
 

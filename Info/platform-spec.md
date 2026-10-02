@@ -191,7 +191,7 @@ Hearting a Post places it into the user's Love Potion.
 
 The Love Potion is a special heart/potion-shaped Shelf collection containing all Hearted items.
 
-Hearting does not directly modify feed recommendations.
+Hearting also influences feed recommendations through connected discovery. A Hearted Post is a strong indication that the user likes that kind of content. Posts that branch from, or are meaningfully connected to, Hearted content can therefore be considered for recommendations. The recommendation system should not simply recommend every connected Post; it should use the connection as one signal among other discovery signals.
 
 Opening the Love Potion uses the normal collection-page structure but has a special blush transition:
 - A blush circle in the center
@@ -216,6 +216,8 @@ Using Salt:
 Removing an item from the Salt Jar:
 - Does not refund the Salt.
 - Does not remove the Salt appreciation from the Post.
+
+Salt also influences feed recommendations through connected discovery. A Salted Post is a stronger indication of the user's interest than an ordinary view. Posts that branch from, or are meaningfully connected to, Salted content can therefore be considered for recommendations. The recommendation system should not simply recommend every connected Post; it should use the connection as one signal among other discovery signals.
 
 The Salt Jar is a personal collection of Salted items.
 
@@ -256,7 +258,7 @@ Mix is similar to putting something into a folder, but the important difference 
 
 Everything inside a Tonic or Barrel is connected for Potion Tree exploration.
 
-Mix does not directly modify feed recommendations.
+Mix does not directly modify feed recommendations. However, Mix relationships can become the connection paths used by Heart and Salt recommendation signals. In other words, a Hearted or Salted Post can cause relevant content branching from that Post through the connection network to become eligible for recommendation.
 
 Mix should be quick and low-friction. Users do not manually draw trees.
 
@@ -379,21 +381,25 @@ If the media is unusually long, the user can scroll through it.
 
 At the bottom is the Post action bar.
 
-Current actions:
+Current actions, from left to right:
+- Mix, the primary connection action
 - Extra Options, three dots
 - Comment, chat bubble
 - Salt, slightly tilted square/diamond
 - Heart, heart icon
 
-Drink and Mix do not need to be primary buttons in this action bar.
+Mix is deliberately the far-left primary action because creating connections is a defining part of the platform.
+
+Drink is not a primary action-bar button. It is available inside Extra Options.
 
 ## 20. Extra Options and Share
 
 Extra Options is a three-dot menu.
 
-The initial menu only needs:
+The initial menu contains:
 - Share
 - Potion Tree
+- Drink
 
 Future utilities such as downloading can be added later.
 
@@ -485,11 +491,13 @@ Drink is a major discovery signal:
 
 Star is also a discovery signal because Posts from starred creators can appear.
 
-Heart does not directly modify recommendations.
+Heart is a recommendation signal. Hearted content can lead to recommendations of relevant Posts connected to that content.
 
-Salt does not directly modify recommendations.
+Salt is also a recommendation signal. Salted content can lead to recommendations of relevant Posts connected to that content.
 
-Mix does not directly modify recommendations.
+Mix itself does not directly act as a preference vote. Its connection relationships can provide the branches through which Heart and Salt recommendation signals discover related content.
+
+The system should not treat a Heart or Salt as a command to recommend every connected Post. Connected content is eligible as a recommendation source, with relevance, connection strength, prior interactions, and other future recommendation signals considered as well.
 
 The exact recommendation algorithm will be designed later.
 
@@ -660,6 +668,14 @@ Selecting a Barrel opens a collection page showing the Barrel's category/name an
 Selecting a Tonic uses the same general layout, replacing the Barrel identity with the Tonic name.
 
 Selecting the Love Potion uses the same general layout and shows liked/Hearted things, with the blush effect.
+
+The Love Potion entrance animation is:
+- One blush circle appears at the exact center.
+- Two additional blush circles appear to the left and right, slightly lower than the center circle.
+- Blush lines appear around the circles.
+- After the transition, the normal Love Potion collection view is shown.
+
+The blush effect is purely visual and does not change what Heart means or how Hearted content is stored.
 
 Selecting the Salt Jar uses the same general layout and shows Salted things, with the freeze effect.
 

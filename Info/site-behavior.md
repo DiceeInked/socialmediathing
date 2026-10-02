@@ -5,9 +5,9 @@ This document records the finalized navigation, profile, comments, notifications
 
 ## 41. Final top navigation and back behavior
 
-The primary top navigation is a compact bar designed for the mobile-first interface.
+The primary top navigation is a compact bar designed for the mobile-first interface. During the UI skeleton phase, icon placeholders use readable text labels such as [FACE], [SEARCH], [BAR], and [SETTINGS] instead of emoji artwork.
 
-On the Home/Bar screen, it contains, from left to right:
+On the Home/Bar screen, it contains, from left to right, evenly distributed across the full top bar with subtle vertical separators:
 - A small smiley/face icon. It has no special feature and may simply refresh the current page.
 - Search, which opens the Search screen.
 - Personal Bar, which opens the user's own Personal Bar.
@@ -57,7 +57,7 @@ The user can:
 - Scroll downward to view Posts they have created.
 - View their Love Potion.
 - View their Salt Jar.
-- View their Drunk Tonics and Drunk Barrels where applicable.
+- View their Drunk Tonics, Drunk Barrels, and Drunk Posts where applicable.
 - Open the notification bell on their own bar/table.
 
 The Shelf is conceptually plural because it can contain multiple collection objects, even though it is collectively called the Shelf.

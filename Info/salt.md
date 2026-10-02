@@ -7,7 +7,8 @@ The Salt button represents special appreciation.
 - Salt is limited to a daily allowance.
 - Using Salt adds Salt appreciation to the Post.
 - Using Salt adds the item to the user's Salt Jar.
-- Salt does not directly influence feed recommendations.
+- Salt influences feed recommendations through connected discovery. Salted Posts can make relevant Posts branching from or meaningfully connected to them eligible for recommendation.
+- Salt is not a command to recommend every connected Post. Connection strength, relevance, prior interactions, and other future recommendation signals can affect which connected content is recommended.
 - Salt is never purchasable.
 
 The user can remove an item from the Salt Jar.

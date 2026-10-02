@@ -1,24 +1,42 @@
 # Drink
 
-The Drink button means:
+Drink is an action. It means:
 
 > "I want to keep this."
 
-## Behavior
+Drink is not the name of an individual Post.
 
-- Drinking a post is unlimited.
-- Drinking a post adds it to the user's personal shelf.
-- A Drink is different from a Tonic and should be displayed as its own item type.
-- Drinking does not require spending Salt or another limited resource.
-- A Drink can later be used when creating Mix connections.
-- Drinking should trigger a distinctive visual animation.
+## What can be Drunk
+
+A user can Drink:
+- A Post
+- A Tonic
+- A Barrel
+
+Drinking any of these adds it to the user's Shelf.
+
+Drinking is unlimited. It never consumes Salt and is never intended to be paywalled.
+
+## Drunk state
+
+After an item is Drunk, its Drink control changes to the state "Drunk".
+
+Selecting "Drunk" again removes the item from the user's Shelf.
 
 ## Visual identity
 
-The Drink animation can use colors or visual elements inspired by the post being drunk.
+Drunk Posts can use a glass-like container.
 
-If a post has also been salted, its Drink can display a salt rim around the bottle.
+Drunk Tonics can use a potion-bottle-like container.
 
-## Meaning
+Drunk Barrels can retain their barrel-themed appearance.
 
-Drink is a save/collect action. It should never be artificially limited or require payment because saving something is a basic part of browsing.
+The Drink action can have a distinctive animation using colors or visual elements inspired by the saved content.
+
+## Recommendation behavior
+
+Drink is an important discovery signal.
+
+Content from Drunk Tonics and Drunk Barrels can contribute to the user's feed, and Drunk Posts can influence recommendations.
+
+Drink is not a public popularity vote and is not a limited resource.
